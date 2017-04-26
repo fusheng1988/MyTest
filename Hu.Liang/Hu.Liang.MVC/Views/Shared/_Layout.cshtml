@@ -6,8 +6,8 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/themes/base/css")
-    @Scripts.Render("~/scripts/base")
-
+  
+   
 </head>
 <body>
 
@@ -18,5 +18,6 @@
     <footer>底部</footer>
     
     @RenderSection("scripts", required: false)
+    @Scripts.Render("~/scripts/base")
 </body>
 </html>

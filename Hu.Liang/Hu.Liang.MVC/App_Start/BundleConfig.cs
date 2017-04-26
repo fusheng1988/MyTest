@@ -42,10 +42,14 @@ namespace Hu.Liang.MVC
             bundles.Add(new ScriptBundle("~/scripts/base").Include(
                         "~/Scripts/jquery-1.8.2.js",
                         "~/Scripts/jquery-1.8.2.min.js",
+                         "~/Scripts/jquery.validate.js",
+                           "~/Scripts/jquery.validate.unobtrusive.js",
                         "~/Scripts/jquery.unobtrusive-ajax.js",
-                        "~/Scripts/jquery.validate.js",
-                        "~/Scripts/jquery.validate.unobtrusive.js"));
-                                                      
+                        "~/Scripts/Page/Index.js"
+                        ));
+
+
+
 
 
         }

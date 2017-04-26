@@ -7,7 +7,7 @@
         if (msg.success==true) {
             window.location.href = msg.url;
         } else {
-            alert(msg.message);
+            $("#form0").showError(msg);
         }
     },
     OnFailure: function (msg) {

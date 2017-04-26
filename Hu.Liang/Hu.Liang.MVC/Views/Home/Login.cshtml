@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <h2>Login</h2>
 
 @using (Ajax.BeginForm("Login", "Home", new AjaxOptions() { OnBegin = "login.OnBegin", OnSuccess = "login.OnSuccess", OnFailure = "login.OnFailure" }))
@@ -15,4 +16,3 @@
     <input type="submit" />
 
 }
-@Scripts.Render("~/Scripts/Page/Index.js")
