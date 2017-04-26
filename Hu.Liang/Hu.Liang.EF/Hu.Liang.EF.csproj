@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{549A089E-5710-429D-9FBD-E08D77D14912}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hu.Liang.EF</RootNamespace>
+    <AssemblyName>Hu.Liang.EF</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Apply_ApplyLoan.cs" />
+    <Compile Include="Model\Apply_Approval_History.cs" />
+    <Compile Include="Model\Apply_Contacts.cs" />
+    <Compile Include="Model\Apply_Current_Approval.cs" />
+    <Compile Include="Model\Apply_Customer.cs" />
+    <Compile Include="Model\Apply_Module.cs" />
+    <Compile Include="Model\Apply_Process.cs" />
+    <Compile Include="Model\Apply_Process_Node.cs" />
+    <Compile Include="Model\Apply_Product.cs" />
+    <Compile Include="Model\Apply_Product_Module_Relation.cs" />
+    <Compile Include="Model\Base_BackupJob.cs" />
+    <Compile Include="Model\Base_Button.cs" />
+    <Compile Include="Model\Base_ButtonPermission.cs" />
+    <Compile Include="Model\Base_CodeRule.cs" />
+    <Compile Include="Model\Base_CodeRuleDetail.cs" />
+    <Compile Include="Model\Base_CodeRuleSerious.cs" />
+    <Compile Include="Model\Base_Company.cs" />
+    <Compile Include="Model\Base_DataDictionary.cs" />
+    <Compile Include="Model\Base_DataDictionaryDetail.cs" />
+    <Compile Include="Model\Base_DataScopePermission.cs" />
+    <Compile Include="Model\Base_Department.cs" />
+    <Compile Include="Model\Base_Email.cs" />
+    <Compile Include="Model\Base_EmailAccessory.cs" />
+    <Compile Include="Model\Base_EmailAddressee.cs" />
+    <Compile Include="Model\Base_EmailCategory.cs" />
+    <Compile Include="Model\Base_Employee.cs" />
+    <Compile Include="Model\Base_ExcelImport.cs" />
+    <Compile Include="Model\Base_ExcelImportDetail.cs" />
+    <Compile Include="Model\Base_FormAttribute.cs" />
+    <Compile Include="Model\Base_FormAttributeValue.cs" />
+    <Compile Include="Model\Base_GroupUser.cs" />
+    <Compile Include="Model\Base_InterfaceManage.cs" />
+    <Compile Include="Model\Base_InterfaceManageParameter.cs" />
+    <Compile Include="Model\Base_Language.cs" />
+    <Compile Include="Model\Base_Module.cs" />
+    <Compile Include="Model\Base_ModulePermission.cs" />
+    <Compile Include="Model\Base_NetworkFile.cs" />
+    <Compile Include="Model\Base_NetworkFolder.cs" />
+    <Compile Include="Model\Base_ObjectUserRelation.cs" />
+    <Compile Include="Model\Base_PhoneNote.cs" />
+    <Compile Include="Model\Base_Post.cs" />
+    <Compile Include="Model\Base_ProvinceCity.cs" />
+    <Compile Include="Model\Base_QueryRecord.cs" />
+    <Compile Include="Model\Base_Roles.cs" />
+    <Compile Include="Model\Base_Shortcuts.cs" />
+    <Compile Include="Model\Base_Supplies.cs" />
+    <Compile Include="Model\Base_SysLog.cs" />
+    <Compile Include="Model\Base_SysLogDetail.cs" />
+    <Compile Include="Model\Base_User.cs" />
+    <Compile Include="Model\Base_View.cs" />
+    <Compile Include="Model\Base_ViewPermission.cs" />
+    <Compile Include="Model\Base_ViewWhere.cs" />
+    <Compile Include="Model\Base_ViewWherePermission.cs" />
+    <Compile Include="HuLiangContext\HuLiang.cs" />
+    <Compile Include="Model\POOrder.cs" />
+    <Compile Include="Model\POOrderEntry.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\TestTable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
