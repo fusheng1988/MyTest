@@ -1,0 +1,18 @@
+﻿@model Hu.Liang.ViewModel.LoginUser
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+@using (Ajax.BeginForm("Login", "Home", new AjaxOptions() { OnBegin = "login.OnBegin", OnSuccess = "login.OnSuccess", OnFailure = "login.OnFailure" }))
+{
+    <p>用户名： @Html.TextBoxFor(c => c.Name) @Html.ValidationMessageFor(c => c.Name)</p>
+    <p>密码： @Html.TextBoxFor(c => c.Pwd) @Html.ValidationMessageFor(c => c.Pwd)</p>
+    <p>验证码： @Html.TextBoxFor(c => c.Code) @Html.ValidationMessageFor(c => c.Code)</p>
+
+    <input type="submit" />
+
+}
+@Scripts.Render("~/Scripts/Page/Index.js")
