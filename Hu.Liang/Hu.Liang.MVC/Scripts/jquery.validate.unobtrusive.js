@@ -378,12 +378,4 @@
     $(function () {
         $jQval.unobtrusive.parse(document);
     });
-
-    $.fn.showError = function (msg) {
-        var $validate = this.validate(),
-            error = {};
-        error["" + msg.errorCode + ""] = msg.errorMessage;
-        $validate.showErrors(error);
-    };
-}(jQuery));
-
+} (jQuery));

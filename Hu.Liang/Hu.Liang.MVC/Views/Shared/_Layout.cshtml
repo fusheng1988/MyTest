@@ -5,19 +5,12 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/themes/base/css")
-  
-   
+    @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-
-   <header>导航</header>
-
     @RenderBody()
 
-    <footer>底部</footer>
-    
+    @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
-    @Scripts.Render("~/scripts/base")
 </body>
 </html>

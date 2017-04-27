@@ -16,7 +16,7 @@ namespace Hu.Liang.Server
         {
             using (var context = new HuLiang())
             {
-                var u = context.Base_User.First(c => c.UserId == userid);
+                var u = context.Base_User.FirstOrDefault(c => c.UserId == userid);
                 if (u != null)
                 {
                     return new ViewUser
